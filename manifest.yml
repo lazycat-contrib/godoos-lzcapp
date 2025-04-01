@@ -1,0 +1,23 @@
+lzc-sdk-version: "0.1"
+name: GodoOS
+package: cloud.lazycat.app.godoos
+version: 0.0.1
+description: 一款高效的内网办公操作系统
+homepage: https://godoos.com/home/os/
+author: godoos
+application:
+  subdomain: godoos
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=http://godoos:56780/
+services:
+  godoos:
+    image: docker.hlmirror.com/godoos/godoos:latest
+    binds:
+      - /lzcapp/var/os:/root/.godoos/os

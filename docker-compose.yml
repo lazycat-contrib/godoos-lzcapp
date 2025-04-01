@@ -1,0 +1,9 @@
+services:
+ godoos:
+  image: godoos/godoos:latest
+  container_name: godoos
+  volumes:
+   - /vol1/1000/docker/godoos/os:/root/.godoos/os
+  ports:
+   - "56780:56780"
+  restart: unless-stopped
