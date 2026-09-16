@@ -1,0 +1,15 @@
+application:
+  subdomain: godoos
+  background_task: true
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://godoos:56780/
+
+services:
+  godoos:
+    # upstream: godoos/godoos:latest
+    image: godoos/godoos:latest
+    binds:
+      - /lzcapp/var/os:/root/.godoos/os

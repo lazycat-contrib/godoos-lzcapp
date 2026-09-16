@@ -1,0 +1,15 @@
+package: cloud.lazycat.app.godoos
+version: 0.0.2
+name: GodoOS
+description: "一款高效的内网办公操作系统"
+min_os_version: "1.5.0"
+homepage: https://godoos.com/home/os/
+author: godoos
+
+locales:
+  zh:
+    name: GodoOS
+    description: "一款高效的内网办公操作系统"
+  en:
+    name: GodoOS
+    description: "A self-hostable operating system for office work"
