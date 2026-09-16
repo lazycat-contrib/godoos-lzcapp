@@ -6,10 +6,9 @@ application:
   upstreams:
     - location: /
       backend: http://godoos:56780/
-
 services:
   godoos:
-    # upstream: godoos/godoos:latest
-    image: godoos/godoos:latest
+    # upstream: godoos/godoos:latest@sha256:9aebb7fad34b1f67622dc19bad62b18f8921423f544dc4f084ad716bcbc925e7
+    image: registry.lazycat.cloud/czyt/godoos/godoos:c37b0252bf607feb
     binds:
       - /lzcapp/var/os:/root/.godoos/os
